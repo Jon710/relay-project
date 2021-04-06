@@ -1,13 +1,13 @@
-// import { ParameterizedContext } from 'koa';
+import { ParameterizedContext } from 'koa';
 
 import { models } from '../db';
-// import { User } from '../db/models/User';
+import { User } from '../db/models/User';
 // import { getLoaders } from './dataloaders';
 
-export function getContext() {
+export function getContext(ctx: ParameterizedContext) {
   return {
     models,
-    // user: ctx.state.user as User | undefined,
+    user: ctx.state.user as User | undefined,
     // dataloaders: getLoaders(models),
     // sequelize,
   };

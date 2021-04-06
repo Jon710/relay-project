@@ -7,6 +7,7 @@
     "@types/bcrypt": "^3.0.0",
     "@types/bluebird": "^3.5.33",
     "@types/graphql-api-koa": "^2.0.2",
+    "@types/jsonwebtoken": "^8.5.1",
     "@types/koa": "^2.13.1",
     "@types/koa-bodyparser": "^4.3.0",
     "@types/koa__router": "^8.0.4",
@@ -29,8 +30,10 @@
     "graphql-api-koa": "^6.0.0",
     "graphql-playground-middleware-koa": "^1.6.21",
     "graphql-tools": "^7.0.4",
+    "jsonwebtoken": "^8.5.1",
     "koa": "^2.13.1",
     "koa-bodyparser": "^4.3.0",
+    "merge-graphql-schemas": "^1.7.8",
     "pg": "^8.5.1",
     "sequelize": "^6.6.2",
     "uuid": "^8.3.2"

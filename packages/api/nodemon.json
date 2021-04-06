@@ -1,6 +1,6 @@
 {
-  "verbose": true,
   "execMap": {
     "ts": "ts-node"
-  }
+  },
+  "ext": "js,json,graphql,ts"
 }

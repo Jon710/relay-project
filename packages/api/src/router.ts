@@ -9,8 +9,8 @@ import Router = require('@koa/router');
 
 const router = new Router();
 
-router.get('/salve', (ctx) => {
-  ctx.body = 'palmeiras';
+router.get('/hello', (ctx) => {
+  ctx.body = 'hello';
 });
 
 router.all('/playground', Playground({ endpoint: '/graphql' }));
@@ -18,8 +18,10 @@ router.all('/playground', Playground({ endpoint: '/graphql' }));
 router.post(
   '/graphql',
   execute({
-    schema,
-    contextValue: getContext(),
+    override: (ctx) => ({
+      schema,
+      contextValue: getContext(ctx),
+    }),
   }),
 );
 
