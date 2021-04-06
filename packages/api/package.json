@@ -4,6 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
+    "@graphql-codegen/cli": "1.21.3",
+    "@graphql-codegen/schema-ast": "^1.18.1",
+    "@graphql-codegen/typescript": "1.21.1",
+    "@graphql-codegen/typescript-resolvers": "1.19.0",
     "@types/bcrypt": "^3.0.0",
     "@types/bluebird": "^3.5.33",
     "@types/graphql-api-koa": "^2.0.2",
@@ -20,7 +24,8 @@
     "typescript": "^4.2.3"
   },
   "scripts": {
-    "dev": "nodemon src/index.ts"
+    "dev": "nodemon src/index.ts",
+    "gen-schema-types": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
     "@koa/router": "^10.0.0",
