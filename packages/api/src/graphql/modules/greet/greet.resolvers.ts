@@ -1,14 +1,14 @@
-import { GraphQLContext } from '../../context';
+import { GQLResolvers } from '../../generated/schema';
 
-function hello(_parent: {}, _args: {}, ctx: GraphQLContext) {
-  if (ctx.user) {
-    return `hello ${ctx.user.name}`;
-  }
-  return 'hello';
-}
-
-export const resolvers = {
+const resolvers: GQLResolvers = {
   Query: {
-    hello,
+    hello(_parent, _args, ctx) {
+      if (ctx.user) {
+        return `hello ${ctx.user.name}`;
+      }
+      return 'hello visitor';
+    },
   },
 };
+
+export default resolvers;

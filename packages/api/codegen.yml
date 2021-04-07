@@ -7,6 +7,19 @@ generates:
       - "typescript-resolvers"
     config:
       contextType: '../context#GraphQLContext'
+      scalars:
+        DateTime: Date
+        EmailAddress: string
+        NegativeFloat: number
+        NegativeInt: number
+        NonNegativeFloat: number
+        NonNegativeInt: number
+        NonPositiveFloat: number
+        NonPositiveInt: number
+        PositiveFloat: number
+        PositiveInt: number
+        # Upload: '../modules/scalars/scalarHelper#FileUploadPromise'
+      typesPrefix: GQL
   data/schema.graphql:
     plugins:
       - schema-ast
